@@ -1,0 +1,2 @@
+class DogWalkingStatus < ApplicationRecord
+end
