@@ -1,11 +1,11 @@
 class DogWalkingsController < ApplicationController
   def index
-    render json: DogWalking.all
+    render json: DogWalking.all, include: :pets
   end
 
   def show
     @dog_walking = DogWalking.find(params[:id])
-    render json: @dog_walking
+    render json: @dog_walking, include: :pets
   end
 
   def create
@@ -13,7 +13,7 @@ class DogWalkingsController < ApplicationController
     @pets = Pet.find(params[:pet_ids])
     @dog_walking.pets << @pets
     @dog_walking.save
-    render json: @dog_walking
+    render json: @dog_walking, include: :pets
   end
 
   private
