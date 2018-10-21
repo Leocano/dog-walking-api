@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_21_175800) do
+ActiveRecord::Schema.define(version: 2018_10_21_180833) do
 
   create_table "dog_walking_statuses", force: :cascade do |t|
     t.string "description"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2018_10_21_175800) do
     t.datetime "finish_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "price"
     t.index ["dog_walking_status_id"], name: "index_dog_walkings_on_dog_walking_status_id"
   end
 
