@@ -3,6 +3,11 @@ class DogWalkingsController < ApplicationController
     render json: DogWalking.all
   end
 
+  def show
+    @dog_walking = DogWalking.find(params[:id])
+    render json: @dog_walking
+  end
+
   def create
     @dog_walking = DogWalking.new(dog_walking_params)
     @pets = Pet.find(params[:pet_ids])
