@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_20_234755) do
+ActiveRecord::Schema.define(version: 2018_10_21_175800) do
 
   create_table "dog_walking_statuses", force: :cascade do |t|
     t.string "description"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2018_10_20_234755) do
   end
 
   create_table "dog_walkings", force: :cascade do |t|
-    t.integer "dog_walking_status_id"
+    t.integer "dog_walking_status_id", default: 1
     t.datetime "scheduled_date"
     t.time "duration"
     t.float "latitude"
