@@ -9,3 +9,7 @@
 DogWalkingStatus.create(description: 'Não iniciado')
 DogWalkingStatus.create(description: 'Em andamento')
 DogWalkingStatus.create(description: 'Finalizado')
+
+Pet.create(name: 'Tião')
+Pet.create(name: 'Amora')
+Pet.create(name: 'Cereja')
