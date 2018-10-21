@@ -1,6 +1,11 @@
 class DogWalkingsController < ApplicationController
   def index
-    render json: DogWalking.all, include: :pets
+    if params[:all] == 'true'
+      @dog_walkings = DogWalking.all
+    else
+      @dog_walkings = DogWalking.where('scheduled_date >= ?', Time.now)
+    end
+    render json: @dog_walkings, include: [:pets, :dog_walking_status]
   end
 
   def show
