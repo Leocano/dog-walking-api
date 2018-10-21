@@ -16,6 +16,14 @@ class DogWalkingsController < ApplicationController
     render json: @dog_walking, include: :pets
   end
 
+  def start_walk
+    @dog_walking = DogWalking.find(params[:dog_walking_id])
+    @dog_walking.dog_walking_status_id = 2
+    @dog_walking.start_time = Time.now
+    @dog_walking.save
+    render json: @dog_walking
+  end
+
   private
     def dog_walking_params
       params.require(:dog_walking).permit(:scheduled_date, :price, :duration, :latitude, 
