@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :dog_walkings do
+    post '/start_walk', to: 'dog_walkings#start_walk'
+    post '/finish_walk', to: 'dog_walkings#finish_walk'
+  end
 end

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dog_walking_status: one
+  scheduled_date: 2018-10-20 20:05:33
+  duration: 2018-10-20 20:05:33
+  latitude: 1.5
+  longitude: 1.5
+  start_time: 2018-10-20 20:05:33
+  finish_time: 2018-10-20 20:05:33
+
+two:
+  dog_walking_status: two
+  scheduled_date: 2018-10-20 20:05:33
+  duration: 2018-10-20 20:05:33
+  latitude: 1.5
+  longitude: 1.5
+  start_time: 2018-10-20 20:05:33
+  finish_time: 2018-10-20 20:05:33

@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+DogWalkingStatus.create(description: 'Não iniciado')
+DogWalkingStatus.create(description: 'Em andamento')
+DogWalkingStatus.create(description: 'Finalizado')
+
+Pet.create(name: 'Tião')
+Pet.create(name: 'Amora')
+Pet.create(name: 'Cereja')
