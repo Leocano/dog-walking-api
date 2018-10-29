@@ -10,7 +10,7 @@ class DogWalkingsController < ApplicationController
 
   def show
     @dog_walking = DogWalking.find(params[:id])
-    render json: @dog_walking, include: :pets, methods: :real_duration
+    render json: @dog_walking, include: [:pets, :dog_walking_status], methods: :real_duration
   end
 
   def create
