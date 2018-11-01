@@ -4,6 +4,7 @@ class DogWalking < ApplicationRecord
   
   private
     def real_duration
-      self.finish_time - self.start_time
+      return nil if self.finish_time.nil?
+      return self.finish_time - self.start_time
     end
 end
